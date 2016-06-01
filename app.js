@@ -1,15 +1,26 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var twss = require('twss');
+var marked = require('marked');
+
+var readmeFileName = './README.md';
+var markdownString = '';
 
 var app = express();
 var port = process.env.PORT || 3000;
+
+fs = require('fs')
+fs.readFile(readmeFileName, 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  markdownString = data;
+});
 
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/',
   function(req, res){
-    res.status(200).sendFile(__dirname + '/README.md');
+    res.status(200).send(marked(markdownString));
   }
 );
 
@@ -22,5 +33,5 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(port, function() {
-  console.log('TWSSbot listening on port '+port);
+  console.log('TWSSBot listening on port '+port);
 })

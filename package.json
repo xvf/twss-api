@@ -2,7 +2,7 @@
   "name": "twss-api",
   "version": "1.0.0",
   "description": "TWSS Rest API on NPM",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/xvf/twss-api/issues"
   },
-  "homepage": "https://github.com/xvf/twss-api#readme"
+  "homepage": "https://github.com/xvf/twss-api#readme",
+  "dependencies": {
+    "marked": "^0.3.5"
+  }
 }
