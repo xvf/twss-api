@@ -1,0 +1,19 @@
+{
+  "name": "twss-api",
+  "version": "1.0.0",
+  "description": "TWSS Rest API on NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xvf/twss-api.git"
+  },
+  "author": "Abhishek Srivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xvf/twss-api/issues"
+  },
+  "homepage": "https://github.com/xvf/twss-api#readme"
+}
