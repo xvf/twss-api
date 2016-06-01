@@ -8,7 +8,7 @@ var markdownString = '';
 var app = express();
 var port = process.env.PORT || 3000;
 
-fs = require('fs')
+var fs = require('fs')
 fs.readFile(readmeFileName, 'utf8', function (err,data) {
   if (err) {
     return console.log(err);
