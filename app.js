@@ -18,6 +18,7 @@ fs.readFile(readmeFileName, 'utf8', function (err,data) {
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+//creating an endpoint for default get
 app.get('/',
   function(req, res){
     res.status(200).send(marked(markdownString));
